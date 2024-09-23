@@ -5,6 +5,7 @@ import UIKit
 
 /// Describe how a coachmark datasource should behave.
 /// It works a bit like `UITableViewDataSource`.
+@MainActor
 public protocol CoachMarksControllerDataSource: AnyObject {
     /// Asks for the number of coach marks to display.
     ///
@@ -66,6 +67,7 @@ public extension CoachMarksControllerDataSource {
     }
 }
 
+@MainActor
 internal protocol CoachMarksControllerProxyDataSource: AnyObject {
     /// Asks for the number of coach marks to display.
     ///

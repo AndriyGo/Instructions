@@ -3,7 +3,7 @@
 
 import UIKit
 
-public class CoachMarkHelper {
+@MainActor public class CoachMarkHelper {
 
     let instructionsRootView: InstructionsRootView
     let flowManager: FlowManager

@@ -108,7 +108,7 @@ class CoachMarksViewController: UIViewController {
     }
 
     deinit {
-        deregisterFromSystemEventChanges()
+        NotificationCenter.default.removeObserver(self)
     }
 
     // Called after the view was loaded.
@@ -217,7 +217,7 @@ class CoachMarksViewController: UIViewController {
     func detachFromWindow() {
         switch presentationFashion {
         case .window:
-            deregisterFromSystemEventChanges()
+            NotificationCenter.default.removeObserver(self)
             let window = view.window
             window?.isHidden = true
             window?.rootViewController = nil
@@ -227,7 +227,7 @@ class CoachMarksViewController: UIViewController {
             self.willMove(toParent: nil)
             self.view.removeFromSuperview()
             self.removeFromParent()
-            deregisterFromSystemEventChanges()
+            NotificationCenter.default.removeObserver(self)
         }
     }
 
@@ -375,10 +375,6 @@ extension CoachMarksViewController {
                            name: UIApplication.willChangeStatusBarFrameNotification, object: nil)
         center.addObserver(self, selector: #selector(restoreAfterChangeDidComplete),
                            name: UIApplication.didChangeStatusBarFrameNotification, object: nil)
-    }
-
-    func deregisterFromSystemEventChanges() {
-        NotificationCenter.default.removeObserver(self)
     }
 }
 

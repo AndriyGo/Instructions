@@ -3,6 +3,7 @@
 
 import UIKit
 
+@MainActor
 public protocol CoachMarkBackgroundStyle {
     var innerColor: UIColor { get set }
     var borderColor: UIColor { get set }
@@ -10,6 +11,7 @@ public protocol CoachMarkBackgroundStyle {
     var highlightedBorderColor: UIColor { get set }
 }
 
+@MainActor
 public protocol CoachMarkBodyBackgroundStyle: AnyObject, CoachMarkBackgroundStyle {
     var isHighlighted: Bool { get set }
     var cornerRadius: CGFloat { get set }

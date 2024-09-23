@@ -4,6 +4,7 @@
 import UIKit
 
 /// A protocol to which all the "skip views" must conform.
+@MainActor
 public protocol CoachMarkSkipView: AnyObject {
     /// The control that will trigger the stop, in the display flow.
     var skipControl: UIControl? { get }

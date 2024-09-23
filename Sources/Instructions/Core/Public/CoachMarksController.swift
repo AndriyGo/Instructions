@@ -5,6 +5,7 @@ import UIKit
 
 // MARK: - Main Class
 /// Handles a set of coach marks, and display them successively.
+@MainActor
 public class CoachMarksController {
     // MARK: - Public properties
     /// Implement the data source protocol and supply

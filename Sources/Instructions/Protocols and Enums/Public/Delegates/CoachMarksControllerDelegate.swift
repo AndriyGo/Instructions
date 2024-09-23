@@ -4,6 +4,7 @@
 import UIKit
 
 /// Give a chance to react when coach marks are displayed
+@MainActor
 public protocol CoachMarksControllerDelegate: AnyObject {
     func coachMarksController(_ coachMarksController: CoachMarksController,
                               configureOrnamentsOfOverlay overlay: UIView)
@@ -35,6 +36,7 @@ public protocol CoachMarksControllerDelegate: AnyObject {
     func shouldHandleOverlayTap(in coachMarksController: CoachMarksController,
                                 at index: Int) -> Bool
 }
+
 
 public extension CoachMarksControllerDelegate {
     func coachMarksController(_ coachMarksController: CoachMarksController,
@@ -82,6 +84,7 @@ public extension CoachMarksControllerDelegate {
     }
 }
 
+@MainActor
 protocol CoachMarksControllerProxyDelegate: AnyObject {
     func configureOrnaments(ofOverlay: UIView)
 

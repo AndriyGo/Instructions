@@ -3,7 +3,7 @@
 
 import UIKit
 
-class CoachMarkLayoutHelper {
+@MainActor class CoachMarkLayoutHelper {
     var layoutDirection: UIUserInterfaceLayoutDirection = .leftToRight
 
     // TODO: Improve the layout system. Make it smarter.

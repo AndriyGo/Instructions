@@ -4,7 +4,7 @@
 import UIKit
 
 /// This class deals with the layout of the "skip" view.
-class SkipViewDisplayManager {
+@MainActor class SkipViewDisplayManager {
     // MARK: - Internal properties
     /// Datasource providing the constraints to use.
     weak var dataSource: CoachMarksControllerProxyDataSource?

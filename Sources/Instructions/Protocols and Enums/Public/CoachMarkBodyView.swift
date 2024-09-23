@@ -4,6 +4,7 @@
 import UIKit
 
 /// A protocol to which all the "body views" of a coach mark must conform.
+@MainActor
 public protocol CoachMarkBodyView: AnyObject {
     /// The control that will trigger the change between the current coach mark
     /// and the next one.

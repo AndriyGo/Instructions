@@ -18,7 +18,7 @@ import UIKit
 ///
 /// TODO: Look for ways to improve everything, I'm fairly confident we can optimize
 ///       a bunch of things.
-class BlurringOverlayStyleManager: OverlayStyleManager {
+@MainActor class BlurringOverlayStyleManager: OverlayStyleManager {
     // MARK: Properties
     weak var overlayView: OverlayView? {
         didSet {

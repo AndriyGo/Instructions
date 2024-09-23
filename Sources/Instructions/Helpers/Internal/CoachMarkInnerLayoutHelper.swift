@@ -3,6 +3,7 @@
 
 import UIKit
 
+@MainActor
 class CoachMarkInnerLayoutHelper {
     func horizontalArrowConstraints(for coachMarkViews: CoachMarkViews,
                                     withPosition position: ArrowPosition,

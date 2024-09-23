@@ -3,7 +3,7 @@
 
 import UIKit
 
-public class FlowManager {
+@MainActor public class FlowManager {
     // MARK: - Internal Properties
     /// `true` if coach marks are curently being displayed, `false` otherwise.
     public var isStarted: Bool { return currentIndex > -1 }
@@ -294,13 +294,6 @@ public class FlowManager {
 
         showPreviousCoachMark(hidePrevious: true)
     }
-
-    // MARK: Renamed Public Properties
-    @available(*, unavailable, renamed: "isStarted")
-    public var started: Bool = false
-
-    @available(*, unavailable, renamed: "isPaused")
-    public var paused: Bool = false
 }
 
 extension FlowManager: CoachMarksViewControllerDelegate {

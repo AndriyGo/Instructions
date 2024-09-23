@@ -3,6 +3,7 @@
 
 import UIKit
 
+@MainActor
 protocol CoachMarkComponent {
     var frame: CGRect { get set }
 }

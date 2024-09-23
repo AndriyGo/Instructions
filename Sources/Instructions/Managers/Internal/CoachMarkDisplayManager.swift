@@ -4,7 +4,7 @@
 import UIKit
 
 /// This class deals with the layout of coach marks.
-class CoachMarkDisplayManager {
+@MainActor class CoachMarkDisplayManager {
     // MARK: - Public properties
     weak var dataSource: CoachMarksControllerProxyDataSource!
     weak var animationDelegate: CoachMarksControllerAnimationProxyDelegate?
